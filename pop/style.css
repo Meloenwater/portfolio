@@ -1,0 +1,127 @@
+.post-it {
+    position: absolute;
+    aspect-ratio: 1;
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: gold;
+    box-shadow: 10px 10px 20px #362e03;
+    font-family:'Courier New', Courier, monospace;
+	flex-direction: column;
+
+
+    &.__isKlein {
+        width: 240px;
+    }
+
+    &.__isMedium {
+        width: 290px;
+    }
+
+    &.__isLongB {
+        background-color: white;
+        height: 640px;
+        width: 450px;
+        flex-direction: column;
+    }
+
+    &.__isLongS {
+        background-color: white;
+        height: 440px;
+        width: 350px;
+        flex-direction: column;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 16px;
+        background-color: tomato;
+        border-radius: 100%;
+        width: 15px;
+        aspect-ratio: 1;
+    }
+}
+
+
+.sticker {
+    position: absolute;
+    display: flex;
+    background-color: white;
+    border: 10px 10px 10px 10px solid;
+    z-index: 3;
+
+
+    &.__isKlein {
+        width: 100px;
+        border-radius: 20px;
+    }
+
+    &.__isMedium {
+        width: 200px;
+        border-radius: 35px;
+    }
+
+    &.__isBig {
+        width: 300px;
+        border-radius: 50px;
+    }
+
+    &.__isBigger {
+        width: 600px;
+        border-radius: 50px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #sidebar {
+        background-color: lavender;
+        width: 5%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        box-shadow: 15px 15px 20px;
+        text-align: center;
+    }
+
+    #logo {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    #sidebar {
+        background-color: lavender;
+        width: 100%;
+        height: 5%;
+    }
+
+    #logo {
+        width: 10%;
+    }
+}
+
+
+
+
+
+a {
+    color: black;
+    font-family:'Courier New', Courier, monospace;
+}
+
+a:hover {
+    color: gray;
+}
+
+body {
+    background-image: url("images/cork.webp");
+}
+
+html {
+	scroll-behavior: smooth;
+}
